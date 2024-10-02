@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/word-puzzle/static/css/main.ba256e50.css",
+    "main.js": "/word-puzzle/static/js/main.52216a47.js",
+    "index.html": "/word-puzzle/index.html",
+    "main.ba256e50.css.map": "/word-puzzle/static/css/main.ba256e50.css.map",
+    "main.52216a47.js.map": "/word-puzzle/static/js/main.52216a47.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba256e50.css",
+    "static/js/main.52216a47.js"
+  ]
+}
