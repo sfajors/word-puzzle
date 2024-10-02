@@ -1,0 +1,131 @@
+.app {
+  text-align: center;
+  font-family: "Schoolbell", cursive, sans-serif;
+  padding: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  gap: 5px;
+  margin: 20px auto;
+  max-width: 90vw;
+  width: fit-content;
+}
+
+h1 {
+  font-family: "Libre Baskerville", serif;
+}
+
+h2 {
+  font-family: "Andika", sans-serif;
+}
+
+@media (max-width: 600px) {
+  .game-board {
+    grid-template-columns: repeat(8, 40px);
+    gap: 4px;
+  }
+
+  .cell {
+    font-size: 1.2em;
+  }
+}
+
+.row {
+  display: contents; /* Allows grid to manage rows */
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: 24px;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s, border 0.3s;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .cell {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+  }
+}
+
+.cell:hover,
+.cell:active {
+  background-color: #ddd;
+}
+
+.cell.selected {
+  background-color: #a0e7e5;
+}
+
+.cell.found {
+  background-color: #90ee90;
+}
+
+.cell.oxygen {
+  background-color: pink !important;
+  transition: background-color 0.3s;
+}
+
+.cell.outline {
+  border: 2px dashed #ff69b4; /* Pink dashed border */
+}
+
+.hint, .question {
+  margin: 20px 0;
+}
+
+.additional-hint {
+  color: #555;
+}
+
+button, input {
+  font-family: "Andika", sans-serif;
+}
+
+.input-box {
+  margin: 20px 0;
+}
+
+.input-box input {
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-box button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.input-box button:hover {
+  background-color: #555;
+}
+
+.congrats {
+  margin-top: 50px;
+}
