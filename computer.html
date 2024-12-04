@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+        <title>Word Search</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="computer-styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Schoolbell&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1 class="game-title">Word Search</h1>
+        <button class="instructions-btn" onclick="toggleInstructions()">Instructions</button>
+        <div class="instructions" id="instructions">
+            <ol>
+                <li><span class="instructions-bold">Choose Your Device</span></li>
+                    <ul>
+                        <li><span class="instructions-bold">On the Home Screen</span>, select whether you are playing on a computer or a mobile device by clicking the corresponding button.</li>
+                    </ul>
+                <li><span class="instructions-bold">Understand the Objective</span></li>
+                    <ul>
+                        <li>Your goal is to find all the hidden words listed in the puzzle.</li>
+                        <li>Words can be arranged <span class="instructions-bold">horizontally</span>, <span class="instructions-bold">vertically</span>, or in a <span class="instructions-bold">straight line</span>.</li>
+                    </ul>
+                <li><span class="instructions-bold">How to Select Words</span></li>
+                    <ul>
+                        <li>On a Touchscreen (<span class="instructions-bold">Mobile/Tablet</span>):</li>
+                            <ul>
+                                <li>Use your finger to drag across the letters of a word.</li>
+                            </ul>
+                        <li>On a <span class="instructions-bold">computer</span>:</li>
+                            <ul>
+                                <li>Click and drag your mouse across the letters of a word</li>
+                                Once you've selected a word correctly
+                                <li>The word will be highlighted.</li>
+                                <li>It will be marked as "found" on your list</li>
+                            </ul>
+                    </ul>
+                <li><span class="instructions-bold">Use Hints</span></li>
+                    <ul>
+                        <li>If you get stuck:</li>
+                        <ul>
+                            <li>Look at the <span class="instructions-bold">hint box</span> for clues about the words you're trying to find.</li>
+                            <li>Keep an eye on the additional hints that appear after a few attempts</li>
+                        </ul>
+                    </ul>
+                <li><span class="instructions-bold">Complete All Words</span></li>
+                    <ul>
+                        <li>Once all the words are found or marked as "failed," a <span class="instructions-bold">Final Question</span> will appear.</li>
+                        <li>Answer the Final Question to complete the game.</li>
+                    </ul>
+                <li><span class="instructions-bold">Answer the Final Question</span></li>
+                    <ul>
+                        <li>Type your answer into the input box provided</li>
+                        <li>Click "Submit" to see if you're correct</li>
+                            <ul>
+                                <li>You will have <span class="instructions-bold">multiple attempts</span> to answer correctly</li>
+                                <li>If you run out of attempts, the correct answer will be revealed</li>
+                            </ul>
+                    </ul>
+            </ol>
+        </div>
+        <div>
+            <canvas id="canvas" width="600" height="400"></canvas>
+            <div id="hint"></div>
+            <div id="gameContainer"></div> <!-- Added for the final question -->
+        </div>
+
+        <script src="computer-script.js"></script>
+    </body>
+</html>

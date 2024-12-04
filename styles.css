@@ -1,0 +1,139 @@
+html {
+    overflow: hidden;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Andika", sans-serif;
+    background-color: #f9f9f9;   
+}
+
+ol, ul {
+    margin-left: 10px; /* Adjust this value for the desired indent */
+    padding-left: 10px;
+}
+
+/* Styling for instructions */
+/* Modal container */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+    background: white;
+    padding: 2em;
+    border-radius: 10px;
+    overflow-y: scroll;
+    max-width: 80vw;
+    height: 70vh;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Blur the rest of the page */
+body.modal-open .welcome-container {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+/* Close button */
+.close-modal-btn {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background-color: #d11010;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-modal-btn:hover {
+    background-color: #a90d0d;
+}
+
+.modal-title {
+    font-family: "Libre Baskerville", serif;
+    margin-bottom: 0.25em;
+    color: purple;
+}
+
+.modal-subtitle {
+    font-family: "Schoolbell", sans-serif;
+    color: #352806;
+}
+
+.instructions-bold {
+    font-weight: bold;
+    color: darkgreen;
+}
+
+.welcome-container {
+    margin: 10vh auto 1em;
+    width: fit-content;
+    max-width: 90vw;
+}
+
+.welcome-title {
+    font-family: "Libre Baskerville", sans-serif;
+}
+
+.welcome-text {
+    margin: 0.2em auto;
+    width: fit-content;
+}
+
+.btn-pc {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* Styling for the Buttons */
+.device-selection-btn {
+    background-color: #238962;
+    color: white;
+    font-family: "Schoolbell", sans-serif;
+    font-size: 1em;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 1em;
+}
+
+#leftBtn {
+    margin-right: 0.5em;
+}
+
+#rightBtn {
+    margin-left: 0.5em;
+}
+
+.device-selection-btn:hover {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #1b7251;
+}
+
+/* Responsive Media Design */
+@media (min-width: 280px) and (max-width: 480px) {
+    .welcome-title {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .welcome-text {
+        font-size: 1em;
+        max-width: 80%;
+        text-align: center;
+    }
+}
